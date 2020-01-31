@@ -123,10 +123,10 @@ export const sendAttachment = (section, payload) => {
         console.log (data.nombre)
         const download = document.createElement("a")
         const linkfile = `data:application/octet-stream;base64,${data.encode}`
+        
         download.href = linkfile;
         download.download = data.nombre;
         download.click();
       });
   };
 };
-
