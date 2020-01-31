@@ -69,6 +69,8 @@ td {
 
 .contenedordefault{
   color: gray;
+  border: none;
+  background: transparent;
 }
 
 @media screen and (max-width:1400px){ 

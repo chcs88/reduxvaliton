@@ -120,7 +120,13 @@ export const sendAttachment = (section, payload) => {
         }
       )
       .then(({ data }) => {
-        console.log (data)
+        console.log (data.nombre)
+        const download = document.createElement("a")
+        const linkfile = `data:application/octet-stream;base64,${data.encode}`
+
+        download.href = linkfile;
+        download.download = data.nombre;
+        download.click();
       });
   };
 };
